@@ -57,5 +57,49 @@ function calcula_resultado(event) {
 }
 
 function executa_operacao(valor1, operador, valor2) {
+    if (operador === '+') {
+        return valor1 + valor2;
+    }else if(operador === "-"){
+        return valor1 - valor2;
+    }else if(operador === '*'){
+        return valor1 * valor2;
+    }else if(operador === '/'){
+        return valor1 / valor2;
+    }
+}
 
+let body = document.getElementsByTagName('body')[0];
+
+body.addEventListener('keydown', pressionou_tecla);
+
+function pressionou_tecla(event){
+    if (event.key === "*"){
+        document.getElementById('botao-multiplicacao');
+    }else if(event.key === "+"){
+        document.getElementById('botao-adicao');
+    }else if (event.key === "-"){
+        document.getElementById('botao-subtracao');
+    }else if (event.key === "/"){
+        document.getElementById('botao-divisao');
+    }else if (event.key === "0"){
+        document.getElementById('botao-0');
+    }else if (event.key === "1"){
+        document.getElementById('botao-1');
+    }else if (event.key === "2"){
+        document.getElementById('botao-2');
+    }else if (event.key === "3"){
+        document.getElementById('botao-3');
+    }else if (event.key === "4"){
+        document.getElementById('botao-4');
+    }else if (event.key === "5"){
+        document.getElementById('botao-5');
+    }else if (event.key === "6"){
+        document.getElementById('botao-6');
+    }else if (event.key === "7"){
+        document.getElementById('botao-7');
+    }else if (event.key === "8"){
+        document.getElementById('botao-8');
+    }else if (event.key === "9"){
+        document.getElementById('botao-9');
+    }
 }
